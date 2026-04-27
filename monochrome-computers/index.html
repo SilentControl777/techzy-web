@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Monochrome Computers sells minimalist laptops and desktops built for focus."
+    />
+    <title>Monochrome Computers | Laptops & Desktops</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script defer src="assets/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Monochrome Computers home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">Monochrome</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="about.html" data-nav="about">About Us</a>
+          <a href="products.html" data-nav="products">Products</a>
+          <a href="contact.html" data-nav="contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="kicker">Minimal hardware. Maximum focus.</p>
+            <h1 class="title-xl">
+              Laptops and desktops built with a clean, modern edge.
+            </h1>
+            <p class="lede">
+              Curated machines for creators, builders, and teams who want quiet
+              performance without the noise.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="products.html">Browse Products</a>
+              <a class="btn btn-ghost" href="about.html">How We Work</a>
+            </div>
+
+            <dl class="hero-metrics" aria-label="Key metrics">
+              <div class="metric">
+                <dt>Warranty</dt>
+                <dd>2 years</dd>
+              </div>
+              <div class="metric">
+                <dt>Shipping</dt>
+                <dd>Fast + insured</dd>
+              </div>
+              <div class="metric">
+                <dt>Support</dt>
+                <dd>Real humans</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="device-card device-laptop">
+              <div class="device-top"></div>
+              <div class="device-screen">
+                <div class="device-glow"></div>
+                <div class="device-lines"></div>
+              </div>
+              <div class="device-base"></div>
+            </div>
+            <div class="device-card device-tower">
+              <div class="tower-face"></div>
+              <div class="tower-port"></div>
+              <div class="tower-port"></div>
+              <div class="tower-port"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2 class="title-lg">Featured picks</h2>
+            <p class="muted">
+              A quick look at what customers are buying this week.
+            </p>
+          </div>
+
+          <div class="grid cards" id="featuredGrid" data-products="featured"></div>
+
+          <div class="section-foot">
+            <a class="link" href="products.html">See all products</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-inset">
+        <div class="container">
+          <div class="split">
+            <div>
+              <h2 class="title-lg">Why Monochrome</h2>
+              <p class="muted">
+                We keep it simple: strong components, clean builds, and honest
+                pricing. No neon. No clutter. Just machines that do the work.
+              </p>
+            </div>
+            <div class="features">
+              <div class="feature">
+                <h3 class="title-md">Curated builds</h3>
+                <p class="muted">
+                  Tested combinations for stability, thermals, and longevity.
+                </p>
+              </div>
+              <div class="feature">
+                <h3 class="title-md">Clean design</h3>
+                <p class="muted">
+                  Minimalist finishes, subtle textures, and no visual noise.
+                </p>
+              </div>
+              <div class="feature">
+                <h3 class="title-md">Smart support</h3>
+                <p class="muted">
+                  Fast diagnosis, clear answers, and real repair options.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand footer-brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-text">Monochrome</span>
+          </div>
+          <p class="muted">
+            Minimalist laptops and desktops for modern work.
+          </p>
+        </div>
+        <div class="footer-links" aria-label="Footer">
+          <a href="about.html">About</a>
+          <a href="products.html">Products</a>
+          <a href="contact.html">Contact</a>
+          <a href="#" id="backToTop">Back to top</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <small class="muted">© <span id="year"></span> Monochrome Computers.</small>
+        <small class="muted">Built in black, gray, and white.</small>
+      </div>
+    </footer>
+  </body>
+</html>
+

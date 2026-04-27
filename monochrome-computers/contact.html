@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Contact Monochrome Computers for product questions, orders, and support."
+    />
+    <title>Contact | Monochrome Computers</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script defer src="assets/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Monochrome Computers home">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">Monochrome</span>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html" data-nav="home">Home</a>
+          <a href="about.html" data-nav="about">About Us</a>
+          <a href="products.html" data-nav="products">Products</a>
+          <a href="contact.html" data-nav="contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container">
+          <p class="kicker">Contact</p>
+          <h1 class="title-xl">Talk to a human.</h1>
+          <p class="lede">
+            Questions about specs, shipping, warranties, or the right build? Send
+            a message and we will respond soon.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="split">
+            <div class="card">
+              <h2 class="title-lg">Send a message</h2>
+              <p class="muted">
+                This is a static site, so the form will open your email app with
+                a pre-filled message.
+              </p>
+
+              <form id="contactForm" class="form" novalidate>
+                <label class="field">
+                  <span class="field-label">Name</span>
+                  <input id="cName" name="name" autocomplete="name" required />
+                  <span class="field-help" data-error-for="cName"></span>
+                </label>
+
+                <label class="field">
+                  <span class="field-label">Email</span>
+                  <input
+                    id="cEmail"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    inputmode="email"
+                    required
+                  />
+                  <span class="field-help" data-error-for="cEmail"></span>
+                </label>
+
+                <label class="field">
+                  <span class="field-label">Message</span>
+                  <textarea
+                    id="cMsg"
+                    name="message"
+                    rows="5"
+                    required
+                    placeholder="Tell us what you need (use-case, budget, screen size, etc.)"
+                  ></textarea>
+                  <span class="field-help" data-error-for="cMsg"></span>
+                </label>
+
+                <div class="form-actions">
+                  <button class="btn btn-primary" type="submit">
+                    Compose Email
+                  </button>
+                  <button class="btn btn-ghost" type="reset">Clear</button>
+                </div>
+
+                <p class="muted tiny">
+                  Or email directly:
+                  <a class="link" href="mailto:sales@monochrome.example"
+                    >sales@monochrome.example</a
+                  >
+                </p>
+              </form>
+            </div>
+
+            <aside class="stack">
+              <div class="card">
+                <h3 class="title-md">Hours</h3>
+                <p class="muted">Mon to Fri, 9:00 to 18:00</p>
+              </div>
+              <div class="card">
+                <h3 class="title-md">Support</h3>
+                <p class="muted">
+                  Include your model name and order number (if you have one).
+                </p>
+              </div>
+              <div class="card">
+                <h3 class="title-md">Location</h3>
+                <p class="muted">
+                  We ship nationwide. Local pickup available by appointment.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <div class="brand footer-brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-text">Monochrome</span>
+          </div>
+          <p class="muted">
+            Minimalist laptops and desktops for modern work.
+          </p>
+        </div>
+        <div class="footer-links" aria-label="Footer">
+          <a href="about.html">About</a>
+          <a href="products.html">Products</a>
+          <a href="contact.html">Contact</a>
+          <a href="#" id="backToTop">Back to top</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <small class="muted">© <span id="year"></span> Monochrome Computers.</small>
+        <small class="muted">Built in black, gray, and white.</small>
+      </div>
+    </footer>
+  </body>
+</html>
+

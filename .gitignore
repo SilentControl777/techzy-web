@@ -1,0 +1,8 @@
+# This repo currently lives at the home directory. To prevent accidentally
+# committing personal/system files, ignore everything by default and only
+# allow the site project folder.
+*
+!.gitignore
+!monochrome-computers/
+!monochrome-computers/**
+
