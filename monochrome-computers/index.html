@@ -5,28 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Monochrome Computers sells minimalist laptops and desktops built for focus."
+      content="Techzy sells minimalist laptops and desktops built for focus."
     />
-    <title>Monochrome Computers | Laptops & Desktops</title>
+    <title>Techzy | Laptops & Desktops</title>
     <link rel="stylesheet" href="assets/styles.css" />
     <script defer src="assets/main.js"></script>
   </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+  <body data-page="home">
+    <a class="skip-link" href="#main" data-i18n="common.skip">Skip to content</a>
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Monochrome Computers home">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span class="brand-text">Monochrome</span>
+        <a class="brand" href="index.html" data-i18n-attr="aria-label:common.brandHomeAria">
+          <img
+            class="brand-logo"
+            src="assets/techzy-logo.svg"
+            alt="Techzy"
+            width="190"
+            height="32"
+          />
         </a>
 
-        <nav class="nav" aria-label="Primary">
-          <a href="index.html" data-nav="home">Home</a>
-          <a href="about.html" data-nav="about">About Us</a>
-          <a href="products.html" data-nav="products">Products</a>
-          <a href="contact.html" data-nav="contact">Contact</a>
-        </nav>
+        <div class="header-actions">
+          <nav class="nav" aria-label="Primary">
+            <a href="index.html" data-nav="home" data-i18n="nav.home">Home</a>
+            <a href="about.html" data-nav="about" data-i18n="nav.about">About Us</a>
+            <a href="products.html" data-nav="products" data-i18n="nav.products">Products</a>
+            <a href="contact.html" data-nav="contact" data-i18n="nav.contact">Contact</a>
+          </nav>
+          <button
+            class="lang-btn"
+            type="button"
+            id="langToggle"
+            data-i18n-attr="aria-label:common.langToggleAria"
+          >
+            EN
+          </button>
+        </div>
       </div>
     </header>
 
@@ -34,31 +49,39 @@
       <section class="hero">
         <div class="container hero-inner">
           <div class="hero-copy">
-            <p class="kicker">Minimal hardware. Maximum focus.</p>
+            <p class="kicker" data-i18n="home.hero.kicker">
+              Minimal hardware. Maximum focus.
+            </p>
             <h1 class="title-xl">
-              Laptops and desktops built with a clean, modern edge.
+              <span data-i18n="home.hero.title"
+                >Laptops and desktops built with a clean, modern edge.</span
+              >
             </h1>
-            <p class="lede">
+            <p class="lede" data-i18n="home.hero.lede">
               Curated machines for creators, builders, and teams who want quiet
               performance without the noise.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="products.html">Browse Products</a>
-              <a class="btn btn-ghost" href="about.html">How We Work</a>
+              <a class="btn btn-primary" href="products.html" data-i18n="home.hero.ctaPrimary"
+                >Browse Products</a
+              >
+              <a class="btn btn-ghost" href="about.html" data-i18n="home.hero.ctaSecondary"
+                >How We Work</a
+              >
             </div>
 
-            <dl class="hero-metrics" aria-label="Key metrics">
+            <dl class="hero-metrics" data-i18n-attr="aria-label:home.metrics.aria">
               <div class="metric">
-                <dt>Warranty</dt>
-                <dd>2 years</dd>
+                <dt data-i18n="home.metrics.warrantyLabel">Warranty</dt>
+                <dd data-i18n="home.metrics.warrantyValue">2 years</dd>
               </div>
               <div class="metric">
-                <dt>Shipping</dt>
-                <dd>Fast + insured</dd>
+                <dt data-i18n="home.metrics.shippingLabel">Shipping</dt>
+                <dd data-i18n="home.metrics.shippingValue">Fast + insured</dd>
               </div>
               <div class="metric">
-                <dt>Support</dt>
-                <dd>Real humans</dd>
+                <dt data-i18n="home.metrics.supportLabel">Support</dt>
+                <dd data-i18n="home.metrics.supportValue">Real humans</dd>
               </div>
             </dl>
           </div>
@@ -85,8 +108,8 @@
       <section class="section">
         <div class="container">
           <div class="section-head">
-            <h2 class="title-lg">Featured picks</h2>
-            <p class="muted">
+            <h2 class="title-lg" data-i18n="home.featured.title">Featured picks</h2>
+            <p class="muted" data-i18n="home.featured.subtitle">
               A quick look at what customers are buying this week.
             </p>
           </div>
@@ -94,7 +117,7 @@
           <div class="grid cards" id="featuredGrid" data-products="featured"></div>
 
           <div class="section-foot">
-            <a class="link" href="products.html">See all products</a>
+            <a class="link" href="products.html" data-i18n="home.featured.link">See all products</a>
           </div>
         </div>
       </section>
@@ -103,28 +126,28 @@
         <div class="container">
           <div class="split">
             <div>
-              <h2 class="title-lg">Why Monochrome</h2>
-              <p class="muted">
+              <h2 class="title-lg" data-i18n="home.why.title">Why Techzy</h2>
+              <p class="muted" data-i18n="home.why.body">
                 We keep it simple: strong components, clean builds, and honest
                 pricing. No neon. No clutter. Just machines that do the work.
               </p>
             </div>
             <div class="features">
               <div class="feature">
-                <h3 class="title-md">Curated builds</h3>
-                <p class="muted">
+                <h3 class="title-md" data-i18n="home.why.f1Title">Curated builds</h3>
+                <p class="muted" data-i18n="home.why.f1Body">
                   Tested combinations for stability, thermals, and longevity.
                 </p>
               </div>
               <div class="feature">
-                <h3 class="title-md">Clean design</h3>
-                <p class="muted">
+                <h3 class="title-md" data-i18n="home.why.f2Title">Clean design</h3>
+                <p class="muted" data-i18n="home.why.f2Body">
                   Minimalist finishes, subtle textures, and no visual noise.
                 </p>
               </div>
               <div class="feature">
-                <h3 class="title-md">Smart support</h3>
-                <p class="muted">
+                <h3 class="title-md" data-i18n="home.why.f3Title">Smart support</h3>
+                <p class="muted" data-i18n="home.why.f3Body">
                   Fast diagnosis, clear answers, and real repair options.
                 </p>
               </div>
@@ -138,25 +161,31 @@
       <div class="container footer-inner">
         <div>
           <div class="brand footer-brand">
-            <span class="brand-mark" aria-hidden="true"></span>
-            <span class="brand-text">Monochrome</span>
+            <img
+              class="brand-logo"
+              src="assets/techzy-logo.svg"
+              alt="Techzy"
+              width="190"
+              height="32"
+            />
           </div>
-          <p class="muted">
+          <p class="muted" data-i18n="footer.tagline">
             Minimalist laptops and desktops for modern work.
           </p>
         </div>
         <div class="footer-links" aria-label="Footer">
-          <a href="about.html">About</a>
-          <a href="products.html">Products</a>
-          <a href="contact.html">Contact</a>
-          <a href="#" id="backToTop">Back to top</a>
+          <a href="about.html" data-i18n="footer.about">About</a>
+          <a href="products.html" data-i18n="footer.products">Products</a>
+          <a href="contact.html" data-i18n="footer.contact">Contact</a>
+          <a href="#" id="backToTop" data-i18n="footer.backToTop">Back to top</a>
         </div>
       </div>
       <div class="container footer-bottom">
-        <small class="muted">© <span id="year"></span> Monochrome Computers.</small>
-        <small class="muted">Built in black, gray, and white.</small>
+        <small class="muted"
+          >© <span id="year"></span> <span data-i18n="footer.copyrightName">Techzy</span>.</small
+        >
+        <small class="muted" data-i18n="footer.themeLine">Built in black, gray, and white.</small>
       </div>
     </footer>
   </body>
 </html>
-

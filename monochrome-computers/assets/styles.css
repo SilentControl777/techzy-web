@@ -114,6 +114,12 @@ img {
   min-width: 160px;
 }
 
+.brand-logo {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
 .brand-mark {
   width: 14px;
   height: 14px;
@@ -136,6 +142,32 @@ img {
   gap: 8px;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.lang-btn {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  padding: 10px 12px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 720;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 160ms ease, border-color 160ms ease;
+}
+.lang-btn:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .nav a {
@@ -812,6 +844,9 @@ textarea:focus {
   .toolbar {
     grid-template-columns: 1fr;
   }
+  .header-inner {
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 860px) {
@@ -826,6 +861,9 @@ textarea:focus {
   }
   .brand {
     min-width: auto;
+  }
+  .brand-logo {
+    height: 22px;
   }
   .product-card {
     grid-column: span 12;
@@ -854,4 +892,3 @@ textarea:focus {
     transition: none;
   }
 }
-

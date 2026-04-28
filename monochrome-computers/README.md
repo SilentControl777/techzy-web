@@ -1,4 +1,4 @@
-# Monochrome Computers (Static Site)
+# Techzy (Static Site)
 
 Static multi-page website (HTML/CSS/JS) for a minimalist laptop + desktop shop.
 
@@ -19,4 +19,3 @@ python3 -m http.server 8000
 ```
 
 Then visit `http://localhost:8000`.
-
