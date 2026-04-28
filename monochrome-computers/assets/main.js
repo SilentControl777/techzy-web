@@ -22,6 +22,7 @@ const I18N = {
     "common.skip": "Skip to content",
     "common.brandHomeAria": "Techzy home",
     "common.langToggleAria": "Switch language",
+    "common.menuToggleAria": "Open menu",
 
     "nav.home": "Home",
     "nav.about": "About Us",
@@ -148,6 +149,7 @@ const I18N = {
     "common.skip": "အကြောင်းအရာသို့ တိုက်ရိုက်သွားရန်",
     "common.brandHomeAria": "Techzy ပင်မစာမျက်နှာ",
     "common.langToggleAria": "ဘာသာစကား ပြောင်းရန်",
+    "common.menuToggleAria": "မီနူး ဖွင့်ရန်",
 
     "nav.home": "ပင်မစာမျက်နှာ",
     "nav.about": "ကျွန်ုပ်တို့အကြောင်း",
@@ -273,6 +275,51 @@ const I18N = {
 
 let activeLang = "en";
 let productsPageCtx = null;
+
+function initMobileMenu() {
+  const btn = qs("#navToggle");
+  const nav = qs("#primaryNav");
+  if (!btn || !nav) return;
+
+  function setOpen(nextOpen) {
+    const open = Boolean(nextOpen);
+    document.body.classList.toggle("nav-open", open);
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    if (!open) btn.focus({ preventScroll: true });
+  }
+
+  btn.addEventListener("click", () => {
+    setOpen(!document.body.classList.contains("nav-open"));
+  });
+
+  // Close when selecting a link
+  qsa("a", nav).forEach((a) => {
+    a.addEventListener("click", () => setOpen(false));
+  });
+
+  // Close on escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setOpen(false);
+  });
+
+  // Close when clicking the scrim (header ::after). We approximate by listening
+  // for clicks on the document and checking if the menu is open and the click
+  // is outside the nav + controls.
+  document.addEventListener("click", (e) => {
+    if (!document.body.classList.contains("nav-open")) return;
+    const target = e.target;
+    if (!(target instanceof Element)) return;
+    if (nav.contains(target) || btn.contains(target)) return;
+    const lang = qs("#langToggle");
+    if (lang && lang.contains(target)) return;
+    setOpen(false);
+  });
+
+  // If resized to desktop, ensure it isn't stuck open.
+  window.addEventListener("resize", () => {
+    if (window.matchMedia("(min-width: 561px)").matches) setOpen(false);
+  });
+}
 
 function t(key, vars) {
   const dict = I18N[activeLang] || I18N.en;
@@ -743,6 +790,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const initial = getSavedLang() || normalizeLang(navigator.language);
   applyI18n(initial);
   initLanguageSwitcher();
+  initMobileMenu();
 
   setActiveNav();
   mountFooterBits();
